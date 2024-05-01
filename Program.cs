@@ -1,71 +1,30 @@
 ﻿using System;
 
-namespace Additionner
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        // Méthode principale de l’application.
-        static void Main(string[] args)
-        {
-            // Section de déclaration des variables
-            int Nombre_1, Nombre_2, Nombre_3, Total;
+        // Déclaration des variables pour la température maximale, minimale et moyenne.
+        int Temperature_Max, Temperature_Min;
+        double Temperature_Moyenne;
 
-            // Saisie du premier nombre.
-            Console.Write("Donnez-moi le premier nombre entier : ");
-            Nombre_1 = Convert.ToInt32(Console.ReadLine());
+        // Demande à l'utilisateur de saisir la température maximale de la journée.
+        Console.Write("Donnez-moi la température maximale de la journée : ");
+        // Saisie de la température maximale et enregistrement dans la variable.
+        Temperature_Max = Convert.ToInt32(Console.ReadLine());
 
-            // Saisie du deuxième nombre.
-            Console.Write("Donnez-moi le deuxième nombre entier : ");
-            Nombre_2 = Convert.ToInt32(Console.ReadLine());
+        // Demande à l'utilisateur de saisir la température minimale de la journée.
+        Console.Write("Donnez-moi la température minimale de la journée : ");
+        // Saisie de la température minimale et enregistrement dans la variable.
+        Temperature_Min = Convert.ToInt32(Console.ReadLine());
 
-            // Saisie du troisième nombre.
-            Console.Write("Donnez-moi le troisième nombre entier : ");
-            Nombre_3 = Convert.ToInt32(Console.ReadLine());
+        // Calcul de la température moyenne de la journée.
+        Temperature_Moyenne = (Temperature_Max + Temperature_Min) / 2.0;
 
-            // Opération d’addition.
-            Total = Nombre_1 + Nombre_2 + Nombre_3;
-
-            // Affichage du résultat et fin du programme.
-            Console.WriteLine(Nombre_1 + " + " + Nombre_2 + " + " + Nombre_3 + " = " + Total);
-
-            Console.ReadKey();
-        }
+        // Affichage du résultat de la température moyenne.
+        Console.WriteLine("La température moyenne de la journée a été de : " + Temperature_Moyenne);
+        
+        // Attente de l'appui sur une touche avant de fermer la console.
+        Console.ReadKey();
     }
 }
-
-
-//je n'avait pas pu trouver mon erreur qui ce situer dans la dernière ligne Console.writeLine(... total, ect.) J'ai donc utiliser tchatgpt-
-//qui lui à corriger:
-
-//J'ai corrigé les points suivants :
-//1. Suppression des espaces avant et après les tirets dans les messages de demande pour uniformiser le style d'écriture.
-//2. Modification de la méthode de conversion de `ToInt16` à `ToInt32` pour éviter toute perte de données en cas de saisie de nombres plus grands.
-//3. Correction du code 
-//using System;
-//namespace Additionner
-//{
-    //class Program
-    //{
-        // Méthode principale de l’application.
-        //static void Main(string[] args)
-        //{
-            // Section de déclaration des variables
-           // int Nombre_1, Nombre_2, Nombre_3, Total;
-            // Saisie du premier nombre.
-          //  Console.Write("Donnez - moi le premier nombre entier: ");
-          //  Nombre_1 = Convert.ToInt16(Console.ReadLine());
-            // Saisie du deuxième nombre.
-          //  Console.Write("Donnez - moi le deuxième nombre entier: ");
-          //  Nombre_2 = Convert.ToInt16(Console.ReadLine());
-            // Saisie du troisième nombre.
-          //  Console.Write("Donnez - moi le troisième nombre entier: ");
-          //  Nombre_3 = Convert.ToInt16(Console.ReadLine());
-            // Opération d’addition.
-         //   Total = Nombre_1 + Nombre_2 + Nombre_3;
-            // Affichage du résultat et fin du programme.
-          //  Console.WriteLine("Nombre_1+ "+" +Nombre_2+ "+ " +Nombre_3+ "="+Total");
-             //   Console.ReadKey();
-     //   }
-  //  }
-//}
-//ligne 66 avait une erreur que je ne trouver pas..
